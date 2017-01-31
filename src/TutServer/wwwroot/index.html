@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<style>
+.odd { background-color: #fafafa;}
+.even { background-color: #f1f1f1}
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{moduleHead}}</title>
+</head>
+
+<body>
+    <div ng-controller="phoneController">
+        <ng-include src="'phonesList.html'"></ng-include>
+    </div>
+
+    <script src="js/lib/angular.min.js"></script>
+    <script type="text/javascript">
+        angular.module('myApp', [])
+        .run(function ($rootScope){
+            $rootScope.moduleHead = "Вы уху ели?";
+        });
+    </script>
+    <script src="js/controllers/phonesController.js"></script>
+</body>
+</html>
