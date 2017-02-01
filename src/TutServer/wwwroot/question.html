@@ -10,22 +10,26 @@
 <body>
     <div  ng-controller="QuestionController">
         <div class="quest" ng-class="questColorClass"
-        ng-mouseenter="changeClass($event)"
-        ng-mouseleave="changeClass($event)">
-        <h3>{{question.text}}</h3>
-        <p>{{question.author}} </p> <p><i>{{question.date}}</i></p>
+            ng-mouseenter="changeClass($event)"
+            ng-mouseleave="changeClass($event)">
+            <h3>{{question.text}}</h3>
+            <p>{{question.author}} </p> <p><i>{{question.date}}</i></p>
         </div>
-        <h3>Ответы</h3>
-        <div class="answers">
+       <h3>Ответы</h3>
+       <input type="checkbox" ng-model="answersVisible">Показать
+       <div ng-if="answersVisible">
             <div ng-repeat="answer in question.answers" class="answer">
-                    <div class="vote">
-                        <a class="vote-up" ng-click="voteUp(answer)"></a>
-                        <span class="rate">{{answer.rate}}</span>
-                        <a class="vote-down" ng-click="voteDown(answer)"></a>
+                <div class="answer">
+                    <div class="answer">
+                        <div class="vote">
+                            <a class="vote-up" ng-click="voteUp(answer)"></a>
+                            <span class="rate">{{answer.rate}}</span>
+                            <a class="vote-down" ng-click="voteDown(answer)"></a>
+                        </div>
+                        <p><b>{{answer.author}}</b> <i>{{answer.date}}</i>:</p>
+                        <p>{{answer.text}}</p>
                     </div>
-                <b>{{answer.text}}</b>
-                <p>{{answer.author}}</p>
-                <p><i>{{answer.date}}</i></p>
+                </div>
             </div>
         </div>
     </div>

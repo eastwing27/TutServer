@@ -40,4 +40,6 @@ myApp.controller('QuestionController', function($scope) {
     {
         $scope.questColorClass = e.type == "mouseover" ? "questselectedcolor" : "questcolor";
     }
+    
+    $scope.answersVisible = false;
 });
