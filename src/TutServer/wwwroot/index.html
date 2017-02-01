@@ -13,6 +13,7 @@
 
 <body>
     <div ng-controller="phoneController">
+
         <div ng-repeat="button in modes">
             <label>
                 <input type="radio" ng-model="data.mode" value="{{button.value}}" name="modes" />
@@ -32,6 +33,8 @@
     </div>
         <!--<div ng-include="setFile()"></div>-->
     </div>
+
+    <p><a href="question.html">Вопрос</a></p>
 
     <script src="js/lib/angular.min.js"></script>
     <script type="text/javascript">

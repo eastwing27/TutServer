@@ -49,4 +49,8 @@ myApp.controller('phoneController', function($scope) {
       value: 'Phones',
       label: 'Смартфоны'
   }];
+
+  $scope.somestyle={background: '#eee', color:'#333'};
+  $scope.someclass="myclass";
+  $scope.data={visible : false};
 });
