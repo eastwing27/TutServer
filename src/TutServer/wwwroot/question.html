@@ -16,11 +16,10 @@
             <p>{{question.author}} </p> <p><i>{{question.date}}</i></p>
         </div>
        <h3>Ответы</h3>
-       <input type="checkbox" ng-model="answersVisible">Показать
+       <div answer-list="question"></div>
+       <!--<input type="checkbox" ng-model="answersVisible">Показать
        <div ng-if="answersVisible">
             <div ng-repeat="answer in question.answers" class="answer">
-                <div class="answer">
-                    <div class="answer">
                         <div class="vote">
                             <a class="vote-up" ng-click="voteUp(answer)"></a>
                             <span class="rate">{{answer.rate}}</span>
@@ -28,9 +27,7 @@
                         </div>
                         <p><b>{{answer.author}}</b> <i>{{answer.date}}</i>:</p>
                         <p>{{answer.text}}</p>
-                    </div>
-                </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <script src="js/lib/angular.min.js"></script>
@@ -38,5 +35,6 @@
         var myApp = angular.module('myApp', []);
     </script>
     <script src="js/controllers/questionCintroller.js"></script>
+    <script src="js/answerList.js"></script>
 </body>
 </html>
