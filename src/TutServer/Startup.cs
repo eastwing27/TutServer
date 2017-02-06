@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using TutServer.Models;
 
 namespace TutServer
 {
@@ -20,6 +21,8 @@ namespace TutServer
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+
+            JsonModel.Load();
         }
 
         public IConfigurationRoot Configuration { get; }
